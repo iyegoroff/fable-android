@@ -1,4 +1,4 @@
-FROM nojaf/fable:latest
+FROM nojaf/fable
 
 # Add the WebUpd8 Oracle Java PPA repository for OpenJDK8 and enable gradle daemon
 RUN echo "deb http://ppa.launchpad.net/webupd8team/java/ubuntu xenial main" | tee /etc/apt/sources.list.d/webupd8team-java.list && \
