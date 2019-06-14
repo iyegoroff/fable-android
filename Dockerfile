@@ -1,4 +1,4 @@
-FROM nojaf/fable:2.3
+FROM nojaf/fable
 
 # Add the WebUpd8 Oracle Java PPA repository for OpenJDK8 and enable gradle daemon
 RUN echo "deb http://ppa.launchpad.net/webupd8team/java/ubuntu xenial main" | tee /etc/apt/sources.list.d/webupd8team-java.list && \
@@ -35,3 +35,5 @@ RUN $ANDROID_HOME/tools/bin/sdkmanager --update
 RUN $ANDROID_HOME/tools/bin/sdkmanager "build-tools;${ANDROID_BUILD_TOOLS_VERSION}" \
     "platforms;android-${ANDROID_VERSION}" \
     "platform-tools"
+
+RUN npm i npm@6.4.1 -g
